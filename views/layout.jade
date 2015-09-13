@@ -18,21 +18,8 @@ html(lang="en")
 
         block introContent
 
-      main
-        block mainContent
-
-
-
-      section.outro
-
-        block outroContent
-
-        footer
-          section.copyright
 
       aside
-        .nav-label
-          h3 Navigation
         .social-media
           ul
             li
@@ -47,3 +34,15 @@ html(lang="en")
                   a(href="/")= item
                 else
                   a(href="/"+item)= item
+
+
+      main
+        block mainContent
+
+
+      section.outro
+        footer
+          section.copyright
+            p &copy; 2015
+          section.contact-links
+            p: a(href="/contact") Contact

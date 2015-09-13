@@ -1,8 +1,10 @@
 extends layout
 
-head
-  title= "hello world"
+block introContent
+  section.welcome
+    h3 Welcome to this site
 
-block content
-  h1= title
-  p Welcome to #{title}
+block mainContent
+  section.blog
+    article#most-recent
+      p This will contain most recent blog link

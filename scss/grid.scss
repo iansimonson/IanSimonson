@@ -1,0 +1,69 @@
+//-------- Extends
+%clearfix:after {
+  display: table;
+  clear: both;
+  content:'';
+}
+
+//-------- Grid System
+
+$grid-spacing: 3%;
+$grid-container-width: 100%;
+$grid-container-max-width: 75em;
+
+.grid-container {
+  width: $grid-container-width;
+  max-width: $grid-container-max-width;
+  box-sizing: border-box;
+}
+
+
+
+.row {
+
+  @extend %clearfix;
+
+  & + & {
+    margin-top: %grid-spacing;
+  }
+}
+
+[class^='col-'] {
+  float: left;
+  min-height: 1px;
+  margin-right: $grid-spacing;
+  width: 8.33%;
+
+
+  &:last-child {
+    margin-right:0%;
+  }
+
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width 100%;
+
+    @media screen and (min-width: 40em){
+      width: 50%;
+    }
+    @media screen and (min-width: 64em){
+      width: 100%/12*$i;
+    }
+  }
+}
+
+.col-1 { width: (100%/12) - ($grid-spacing * 11/12); }
+.col-2 { width: (100%/6) - ($grid-spacing * 10/12); }
+.col-3 { width: (100%/4) - ($grid-spacing * 9/12); }
+.col-4 { width: (100%/3) - ($grid-spacing * 8/12); }
+.col-5 { width: (100%/2.4) - ($grid-spacing * 7/12); }
+.col-6 { width: (100%/2) - ($grid-spacing * 6/12); }
+.col-7 { width: (100%/1.714285714285714) - ($grid-spacing * 5/12); }
+.col-8 { width: (100%/1.5) - ($grid-spacing * 4/12); }
+.col-9 { width: (100%/1.333333333333333) - ($grid-spacing * 3/12); }
+.col-10 { width: (100%/1.2) - ($grid-spacing * 2/12); }
+.col-11 { width: (100%/1.090909090909091) - ($grid-spacing * 1/12); }
+.col-12 { width: (100%); }
+

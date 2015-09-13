@@ -1,8 +1,61 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import "./mixins";
+@import "./vars";
+
+
+* {
+  @include prefix((box-sizing: border-box));
 }
 
-a {
-  color: #00B7FF;
+html {
+  padding: 0;
+  margin: 0;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+  background: $primary-background-color;
+  font: 1em "Lucida Grande", sans-serif;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+header {
+  height: 200px;
+  padding: 20px 0 70px 0;
+  color: $header-color;
+  background: $header-background;
+  h1 {
+    margin:0;
+    padding:0;
+    font-size: 2em;
+  }
+  h2 {
+    position: relative;
+    margin-left: 5em;
+    font-size: .7em;
+    top: -1em;
+  }
+  
+  margin: 0 5% 0 5%;
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+}
+
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include prefix((transition: all 0.3s ease));
+
+  &:hover,&:focus {
+    color: $link-color-hover;
+  }
+}
+
+ul {
+  list-style: none;
+}
+

@@ -1,7 +1,49 @@
+- var githubLink = "https://github.com/iansimonson"
+- var linkedinLink = "https://www.linkedin.com/in/iansimonson"
+
 doctype html
 html(lang="en")
   head
     title= title
+    meta(charset-"utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    .page-wrapper
+
+      section.intro
+        header
+          h1 Ian Simonson
+          h2 Lorem ipsum dolor sit amet, consectetur.
+
+        block introContent
+
+      main
+        block mainContent
+
+
+
+      section.outro
+
+        block outroContent
+
+        footer
+          section.copyright
+
+      aside
+        .nav-label
+          h3 Navigation
+        .social-media
+          ul
+            li
+              a(href= githubLink) GitHub
+            li 
+              a(href= linkedinLink) LinkedIn
+        nav
+          ul
+            for item in ["home","blog","contact"]
+              li
+                if item == "home"
+                  a(href="/")= item
+                else
+                  a(href="/"+item)= item

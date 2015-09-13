@@ -1,0 +1,32 @@
+@mixin prefix($properties,$vendors: webkit moz){
+  @each $property, $value in $properties {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $property}: #{$value};
+      }
+    }
+
+    #{$property}: #{$value};
+  }
+}
+
+@mixin box-shadow($shadow1, $shadow2: false,
+      $shadow3: false, $shadow4: false, $shadow5: false){
+  
+  $shadow-builder: $shadow1;
+  @if $shadow2 {
+    $shadow-builder: #{$shadow-builder, $shadow2};
+    @if $shadow3 {
+      $shadow-builder: #{$shadow-builder, $shadow3};
+      @if $shadow4 {
+        $shadow-builder: #{$shadow-builder, $shadow4};
+        @if $shadow5 {
+          $shadow-builder: #{$shadow-builder, $shadow5};
+        }
+      }
+    }
+  }
+
+  @include prefix((box-shadow: $shadow-builder));
+
+}

@@ -6,8 +6,12 @@ block extraHead
 block mainContent
   h1 Blog
   #articles
-    for article in articles
-      .article
-        h2.title 
-          a(href="/blog/"+article._id.toHexString())!= article.title
-        p= article.full_text
+    if articles.length == 0
+      h2 There are no blog posts
+      p Either something's terribly wrong or there really aren't any blog posts yet
+    else
+      for article in articles
+        .article
+          h2.title 
+            a(href="/blog/"+article._id.toHexString())!= article.title
+          p= article.full_text

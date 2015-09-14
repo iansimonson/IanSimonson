@@ -4,6 +4,7 @@
 
 @import "./global";
 
+
 header {
   height: 150px;
   padding: 20px 0 70px 0;
@@ -25,6 +26,9 @@ header {
   border-bottom: 3px solid rgba(0,0,0,0.1);
 
   .social-media {
+    .menu {
+      display:none;
+    }
     float: right;
     font-size: 1em;
     li {
@@ -76,6 +80,7 @@ aside {
 main {
   width: 70%;
   margin: 0 5% 0 auto;
+  min-height: 360px;
 }
 
 footer {
@@ -101,4 +106,36 @@ footer {
     text-align: right;
     margin-right: 10%;
   }
+}
+
+@media screen and (max-width: 40em){
+  header .social-media .menu {
+    display: block;
+    a {
+      &:visited {
+        color: $link-color;
+      }
+    }
+  }
+
+  header .social-media .sm-links {
+    display: none;
+  }
+
+  .oc-nav {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    width: 50%;
+    min-height: 200px;
+    background: $nav-background-color-opaque;
+  }
+  .off-canvas {
+    left: -9999px;
+  }
+
+  main,.welcome {
+    width: 100%;
+  }
+
 }

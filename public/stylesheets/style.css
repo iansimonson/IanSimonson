@@ -55,6 +55,8 @@ header {
   header .social-media {
     float: right;
     font-size: 1em; }
+    header .social-media .menu {
+      display: none; }
     header .social-media li {
       display: inline;
       padding: .3em; }
@@ -86,7 +88,8 @@ aside {
 
 main {
   width: 70%;
-  margin: 0 5% 0 auto; }
+  margin: 0 5% 0 auto;
+  min-height: 360px; }
 
 footer {
   width: 100%;
@@ -107,3 +110,20 @@ footer {
     float: right;
     text-align: right;
     margin-right: 10%; }
+
+@media screen and (max-width: 40em) {
+  header .social-media .menu {
+    display: block; }
+    header .social-media .menu a:visited {
+      color: #00B7FF; }
+  header .social-media .sm-links {
+    display: none; }
+  aside {
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    width: 50%;
+    min-height: 200px;
+    background: #3296c8; }
+  main, .welcome {
+    width: 100%; } }

@@ -18,16 +18,19 @@ html(lang="en")
           h2 Lorem ipsum dolor sit amet, consectetur.
 
           .social-media
-            ul
+            ul.sm-links
               li
                 a(href= githubLink) GitHub
               li 
                 a(href= linkedinLink) LinkedIn
+            ul.menu
+              li
+                a(href="#") Menu
 
         block introContent
 
 
-      aside
+      aside.oc-nav
         nav
           ul
             for item in ["home","blog","contact"]

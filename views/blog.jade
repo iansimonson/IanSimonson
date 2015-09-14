@@ -8,10 +8,10 @@ block mainContent
   #articles
     if articles.length == 0
       h2 There are no blog posts
-      p Either something's terribly wrong or there really aren't any blog posts yet
+      p Hopefully that will change soon, or I've done something very wrong
     else
       for article in articles
         .article
           h2.title 
             a(href="/blog/"+article._id.toHexString())!= article.title
-          p= article.full_text
+          article.full_text

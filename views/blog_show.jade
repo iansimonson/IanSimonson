@@ -5,10 +5,9 @@ block extraHead
 block mainContent
   h1= title
   .article
-    .created_at= article.created_at
-    .title= article.title
-    .body= article.full_text
-    for comment in article.comments
+    .title: h2= article.title
+    .body: p= article.full_text
+    //for comment in article.comments
       .comment
         .commenter= comment.commenter
         .comment= comment.full_text

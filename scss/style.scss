@@ -71,6 +71,10 @@ aside {
 
 }
 
+.hide-on-desktop {
+  display: none;
+}
+
 .welcome {
   width: 70%;
   // float: right;
@@ -122,16 +126,22 @@ footer {
     display: none;
   }
 
-  .oc-nav {
+  #oc-nav {
     position: absolute;
     top: 150px;
     left: 0px;
     width: 50%;
     min-height: 200px;
     background: $nav-background-color-opaque;
+    @include prefix((transition: all 0.35s ease));
   }
-  .off-canvas {
+  #oc-nav.off-canvas {
     left: -9999px;
+  }
+
+  .hide-on-desktop {
+    display: inline-block;
+    margin-top: 2px;
   }
 
   main,.welcome {

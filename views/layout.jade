@@ -8,6 +8,7 @@ html(lang="en")
     meta(charset-"utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
     block extraHead
   body
     .page-wrapper
@@ -25,12 +26,12 @@ html(lang="en")
                 a(href= linkedinLink) LinkedIn
             ul.menu
               li
-                a(href="#") Menu
+                a#menuButton(href="#") Menu
 
         block introContent
 
 
-      aside.oc-nav
+      aside#oc-nav.off-canvas
         nav
           ul
             for item in ["home","blog","contact"]
@@ -39,6 +40,11 @@ html(lang="en")
                   a(href="/")= item
                 else
                   a(href="/"+item)= item
+          ul.hide-on-desktop  
+            li
+              a(href= linkedinLink) LinkedIn
+            li
+              a(href= githubLink) GitHub
 
 
       main
@@ -54,3 +60,5 @@ html(lang="en")
               li: a(href="/contact") Contact
               li: a(href= linkedinLink) LinkedIn
               li: a(href= githubLink) GitHub
+
+      script(src="javascripts/menu.js")

@@ -82,6 +82,9 @@ aside {
   aside nav {
     font-size: 1.3em; }
 
+.hide-on-desktop {
+  display: none; }
+
 .welcome {
   width: 70%;
   margin: 0 5% 0 auto; }
@@ -118,14 +121,20 @@ footer {
       color: #00B7FF; }
   header .social-media .sm-links {
     display: none; }
-  .oc-nav {
+  #oc-nav {
     position: absolute;
     top: 150px;
     left: 0px;
     width: 50%;
     min-height: 200px;
-    background: #3296c8; }
-  .off-canvas {
+    background: #3296c8;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    transition: all 0.35s ease; }
+  #oc-nav.off-canvas {
     left: -9999px; }
+  .hide-on-desktop {
+    display: inline-block;
+    margin-top: 2px; }
   main, .welcome {
     width: 100%; } }

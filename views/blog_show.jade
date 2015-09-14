@@ -1,0 +1,26 @@
+extends layout
+
+block extraHead
+
+block mainContent
+  h1= title
+  .article
+    .created_at= article.created_at
+    .title= article.title
+    .body= article.full_text
+    for comment in article.comments
+      .comment
+        .commenter= comment.commenter
+        .comment= comment.full_text
+
+    //div
+      form(method="post",action="/blog/addComment")
+        input(type="hidden", name="_id", value=article._id.toHexString())
+        div
+          span Author :
+          input( type="text", name="commenter", id="addCommentPerson")
+        div
+          span Comment :
+          textarea( name="full_text", rows=5 id="addCommentBody")
+        div#editArticleSubmit
+          input(type="submit", value="send")

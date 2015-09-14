@@ -1,0 +1,17 @@
+@import './vars';
+
+main {
+  h1 {
+    color: $header-color;
+  }
+}
+
+#articles {
+  text-align: center;
+
+  .title {
+    a{
+      color: black;
+    }
+  }
+}

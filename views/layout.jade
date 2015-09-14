@@ -8,6 +8,7 @@ html(lang="en")
     meta(charset-"utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel='stylesheet', href='/stylesheets/style.css')
+    block extraHead
   body
     .page-wrapper
 
@@ -16,16 +17,17 @@ html(lang="en")
           h1 Ian Simonson
           h2 Lorem ipsum dolor sit amet, consectetur.
 
+          .social-media
+            ul
+              li
+                a(href= githubLink) GitHub
+              li 
+                a(href= linkedinLink) LinkedIn
+
         block introContent
 
 
       aside
-        .social-media
-          ul
-            li
-              a(href= githubLink) GitHub
-            li 
-              a(href= linkedinLink) LinkedIn
         nav
           ul
             for item in ["home","blog","contact"]
@@ -45,4 +47,7 @@ html(lang="en")
           section.copyright
             p &copy; 2015
           section.contact-links
-            p: a(href="/contact") Contact
+            ul
+              li: a(href="/contact") Contact
+              li: a(href= linkedinLink) LinkedIn
+              li: a(href= githubLink) GitHub

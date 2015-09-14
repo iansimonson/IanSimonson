@@ -1,0 +1,13 @@
+extends layout
+
+block extraHead
+  link(rel="stylesheet",href="/stylesheets/blog.css")
+
+block mainContent
+  h1 Blog
+  #articles
+    for article in articles
+      .article
+        h2.title 
+          a(href="/blog/"+article._id.toHexString())!= article.title
+        p= article.full_text

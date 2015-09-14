@@ -23,10 +23,19 @@ header {
   
   margin: 0 5% 0 5%;
   border-bottom: 3px solid rgba(0,0,0,0.1);
+
+  .social-media {
+    float: right;
+    font-size: 1em;
+    li {
+      display: inline;
+      padding: .3em;
+    }
+  }
 }
 
 aside {
-  position: absolute;
+  position: fixed;
   width: 20%;
   margin-left: 0;
   left: 0;
@@ -52,14 +61,6 @@ aside {
     }
   }
 
-  .social-media {
-    font-size: 1em;
-    li {
-      display: inline;
-      padding: .3em;
-    }
-  }
-
   nav {
     font-size: 1.3em;
   }
@@ -70,7 +71,6 @@ aside {
   width: 70%;
   // float: right;
   margin: 0 5% 0 auto;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 main {
@@ -84,13 +84,21 @@ footer {
   margin: 0;
   padding: 0;
   background: $footer-background-color;
+  a {
+    color: black;
+    &:hover,&:focus {
+      color: black;
+    }
+  }
   .copyright {
-    width: 50%;
+    width: 30%;
     float: left;
+    margin-left: 10%;
   }
   .contact-links {
-    width: 50%;
+    width: 30%;
     float: right;
     text-align: right;
+    margin-right: 10%;
   }
 }

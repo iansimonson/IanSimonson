@@ -3,10 +3,9 @@ extends layout
 block introContent
   section.welcome
     p.
-      Welcome. This is my personal site for hosting contact information
-      as well as a blog. As time goes on I plan to add more modules
-      on the site navigation as I learn more about web technologies. All
-      source files for this site are available on #[a(href= githubLink) GitHub].
+      Welcome. This is my personal site for my blog and contact information. As time goes on I plan to add more modules
+      on the site navigation as I experiment with web technologies. All
+      source files for this site are available on #[a(href= githubLink + "/IanSimonson") GitHub].
 
     p.
       Take a look around. The design is a continuous work in progress. While I've been
@@ -18,12 +17,12 @@ block mainContent
   section.blog
     article#most-recent
       h2 Recent updates
-      p: strong This line will eventually contain the latest blog post (currently not implemented)
+      p: The blog is currently under #[a(href="/blog") /blog] and all the routing is based on that root. A workaround will be put in place to list the most recent blog post here.
 
     article
       h2 About the site
       p.
-        The site is currently pretty sparse, but I will be adding to it over the next few weeks. As time goes on it will change, both in layout and content. If things break at some point, it's probably because I'm trying something out and did something I wasn't supposed to. The site will come back up eventually.
+        This is my personal site to talk about technologies I'm experimenting with or other similar tech-related ongoings. I will be adding to it over time. Any web-app or new feature I add on the site navigation will be covered in a blog post and the source code will be made available. The site's layout may also change. If things break at some point, well that's part of the learning process and I'll get the site back up.
       p.
         I've learned and continue to learn by googling, reading other blog posts, and copious amounts of copying, splicing, and sanitizing various code snippets from other people. As such, all source code for this site and blog, as well as any projects or little code bits I might talk about, I will be posting on my GitHub. 
 

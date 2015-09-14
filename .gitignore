@@ -2,3 +2,4 @@
 *.css
 *.log
 /config/*
+*.DS_Store

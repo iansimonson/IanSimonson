@@ -35,9 +35,8 @@ h2, h3, h4, p, a {
 ul {
   list-style: none; }
 
-.welcome, main {
-  padding: 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+main {
+  padding: 1em; }
 
 header {
   height: 150px;
@@ -53,7 +52,7 @@ header {
   header h2 {
     position: relative;
     margin-left: 5em;
-    font-size: .7em;
+    font-size: 1em;
     top: -1em; }
   header .social-media {
     float: right;
@@ -87,10 +86,6 @@ aside {
 
 .hide-on-desktop {
   display: none; }
-
-.welcome {
-  width: 70%;
-  margin: 0 5% 0 auto; }
 
 main {
   width: 70%;
@@ -141,3 +136,9 @@ footer {
     margin-top: 2px; }
   main, .welcome {
     width: 100%; } }
+
+.code {
+  background: #eee; }
+
+.blog, .welcome {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }

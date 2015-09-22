@@ -5,9 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var sassMiddleware = require('node-sass-middleware');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var blog = require('./routes/blog');
+
+
+var configDB = require('./config/database.js');
+mongoose.connect(configDB.url);
+
+
 
 var app = express();
 
@@ -65,6 +72,8 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+
 
 
 module.exports = app;

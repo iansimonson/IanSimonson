@@ -1,6 +1,9 @@
 extends layout
 
-block introContent
+
+  
+
+block mainContent
   section.welcome
     p.
       Welcome. This is my personal site for my blog and contact information. As time goes on I plan to add more modules
@@ -11,14 +14,21 @@ block introContent
       Take a look around. The design is a continuous work in progress. While I've been
       using the #[a(href= "http://www.csszengarden.com/") CSS Zen Garden]
       approach to design, if you have any CSS tips/layout suggestions feel free
-      to send me an email.
+      to send me an #[a(href="mailto:ian@iansimonson.com") email].
 
-block mainContent
   section.blog
     article#most-recent
       h2 Recent updates
-      p: The blog is currently under #[a(href="/blog") /blog] and all the routing is based on that root. A workaround will be put in place to list the most recent blog post here.
+      if articles.length == 0
+        p: The blog is currently under #[a(href="/blog") /blog] and all the routing is based on that root. A workaround will be put in place to list the most recent blog post here.
+      else
+        for article in articles
+          .article
+            h3.title
+              a(href="/blog/"+article._id.toHexString())!= article.title
+            .body !{article.small_text}
 
+  section.other-content
     article
       h2 About the site
       p.
@@ -28,4 +38,3 @@ block mainContent
 
       p.
         The site's source is available under the #[a(href="http://www.wtfpl.net/") WTFPL] on #[a(href= githubLink + "/IanSimonson") GitHub].
-      

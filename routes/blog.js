@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var configDB = require('../config/database.js');
+var PostModel = require('../models/Post.js');
 
 
 
@@ -13,21 +13,12 @@ var configDB = require('../config/database.js');
 //   created_at: {type: Date, default: Date.now}
 // });
 
-var Post = new Schema({
-  title: {type: String, required: true},
-  full_text: {type: String, required: true},
-  // comments: [Comment],
-  created_at: {type: Date, default: Date.now},
-  modified: {type: Date, default: Date.now}
-});
-
-var PostModel = mongoose.model('Post', Post);
 
 
-mongoose.connect(configDB.url);
+
 
 router.get('/', function(req, res, next) {
-  PostModel.find(function(error, posts){
+  PostModel.find({},null,{sort: {created_at: -1}},function(error, posts){
     if(error) {
       console.error(error);
     } else {

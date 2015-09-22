@@ -5,21 +5,4 @@ block extraHead
 block mainContent
   h1= title
   .article
-    .title: h2= article.title
-    .body: p= article.full_text
-    //for comment in article.comments
-      .comment
-        .commenter= comment.commenter
-        .comment= comment.full_text
-
-    //div
-      form(method="post",action="/blog/addComment")
-        input(type="hidden", name="_id", value=article._id.toHexString())
-        div
-          span Author :
-          input( type="text", name="commenter", id="addCommentPerson")
-        div
-          span Comment :
-          textarea( name="full_text", rows=5 id="addCommentBody")
-        div#editArticleSubmit
-          input(type="submit", value="send")
+    .body: !{article.full_text}

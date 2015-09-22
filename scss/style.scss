@@ -18,7 +18,7 @@ header {
   h2 {
     position: relative;
     margin-left: 5em;
-    font-size: .7em;
+    font-size: 1em;
     top: -1em;
   }
   
@@ -75,11 +75,11 @@ aside {
   display: none;
 }
 
-.welcome {
-  width: 70%;
-  // float: right;
-  margin: 0 5% 0 auto;
-}
+// .welcome {
+//   width: 100%;
+//   // float: right;
+//   //margin: 0 5% 0 auto;
+// }
 
 main {
   width: 70%;
@@ -148,4 +148,12 @@ footer {
     width: 100%;
   }
 
+}
+
+.code {
+  background: #eee;
+}
+
+.blog,.welcome {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }

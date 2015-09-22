@@ -44,8 +44,7 @@ ul {
   list-style: none;
 }
 
-.welcome,main {
+main {
   // @include box-shadow(-10px 0 5px $content-shadow-color);
   padding: 1em;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
 }

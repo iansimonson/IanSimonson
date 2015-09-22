@@ -14,4 +14,4 @@ block mainContent
         .article
           h2.title 
             a(href="/blog/"+article._id.toHexString())!= article.title
-          article.full_text
+          .body !{article.small_text}

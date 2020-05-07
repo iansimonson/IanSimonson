@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> title</title>
+        <meta charset="utf-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Abel", rel="stylesheet", type="text/css">
+        <link rel='stylesheet', href='/stylesheets/style.css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="page-wrapper">
+
+            <section class="intro">
+                <header>
+                    <h1>Ian Simonson</h1>
+                    <h2>Personal site</h2>
+
+                    <div class="social-media">
+                        <ul class="sm-links">
+                            <li><a href="https://github.com/iansimonson">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/iansimonson">LinkedIn</a></li>
+                        </ul>
+                        <ul class="menu">
+                            <li><a id="menuButton" href="#">Menu</a></li>
+                        </ul>
+                    </div>
+                </header>
+            </section>
+
+
+            <aside id="oc-nav" class="off-canvas">
+                <nav>
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="/contact">contact</a></li>
+                    </ul>
+                    <ul class="hide-on-desktop">
+                        <li><a href="https://www.linkedin.com/in/iansimonson">LinkedIn</a></li>
+                        <li><a href="https://github.com/iansimonson">GitHub</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <section class="welcome">
+                    <p>Welcome. This is my personal site mostly for contact info. 
+                    All source files for this site are available on 
+                    <a href="https://github.com/iansimonson/IanSimonson">GitHub</a>.</p>
+                    <p>There use to be a blog here but I've removed that while 
+                    getting this back up and running.</p>
+                </section>
+                <section class="other-content">
+                    <article>
+                        <h2>About the site</h2>
+                        <p>This is my personal site to talk about technologies I'm experimenting 
+                        with or other similar projects. However I've only recently decided to 
+                        get this back up and running so for now it is mostly just contact info.
+                        Currently the site is just static pages using 
+                        <a href="https://www.nginx.com/">Nginx</a> though I plan on experimenting 
+                        with <a href="https://rocket.rs/">Rocket</a> or something more custom 
+                        using <a href="https://ziglang.org/">Zig</a>.
+                        The site's layout may also change.</p>
+                        <p>I've learned and continue to learn by googling, reading blog posts,
+                        and copious amounts of copying, splicing, and sanitizing various code 
+                        snippets from other people. As such, all source code for this site 
+                        and any code snippets I might post here will be on GitHub.</p>
+                        <p>The site's source is available on
+                        <a href="https://github.com/iansimonson/IanSimonson">GitHub</a> currently under the
+                        <a href="http://www.wtfpl.net/">WTFPL</a> but after some research will
+                        be under the Zero-Clause BSD or CC-0 which hopefully is more useful</p>
+                    </article>
+                </section>
+            </main>
+
+            <section class="outro">
+                <footer>
+                    <section class="copyright">
+                        <p>&copy; Ian Simonson 2020</p>
+                    </section>
+                    <section class="contact-links">
+                        <ul>
+                            <li><a href="/contact">contact</a></li>
+                            <li><a href="https://www.linkedin.com/in/iansimonson">LinkedIn</a></li>
+                            <li><a href="https://github.com/iansimonson">GitHub</a></li>
+                        </ul>
+                    </section>
+                </footer>
+            </section>
+            <script src="javascripts/menu.js"></script>
+    </body>
+</html>

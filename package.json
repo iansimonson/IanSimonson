@@ -18,7 +18,9 @@
     "node-sass-middleware": "latest",
     "passport": "latest",
     "passport-local": "latest",
-    "pug": "latest",
+    "jade": "latest",
+    "pug": "^2.0.4",
+    "pug-lint": "^2.6.0",
     "serve-favicon": "latest"
   }
 }
